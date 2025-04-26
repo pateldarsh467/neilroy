@@ -14,6 +14,48 @@
       margin: 0 auto;
       padding: 20px;
       background-color: #fcfaf7;
+      position: relative;
+    }
+
+    .dev-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ff6b6b;
+      color: white;
+      text-align: center;
+      padding: 8px 0;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      z-index: 1000;
+      animation: colorChange 3s infinite alternate;
+    }
+
+    @keyframes colorChange {
+      0% {
+        background-color: #ff6b6b;
+      }
+      50% {
+        background-color: #feca57;
+      }
+      100% {
+        background-color: #ff9ff3;
+      }
+    }
+
+    .banner-text {
+      display: inline-block;
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
 
     header {
@@ -21,6 +63,7 @@
       margin-bottom: 3rem;
       padding-bottom: 1.5rem;
       border-bottom: 1px solid #e6e0d4;
+      margin-top: 35px;
     }
 
     h1 {
@@ -301,6 +344,10 @@
   </style>
 </head>
 <body>
+  <div class="dev-banner">
+    <div class="banner-text">⚠️ TEST WEBSITE - UNDER DEVELOPMENT - PLEASE DO NOT SUBMIT ANY REAL INFORMATION ⚠️</div>
+  </div>
+
   <header>
     <span class="emphasis">Urgent Request</span>
     <h1>Help Neil Roy Find a Kidney Donor</h1>
